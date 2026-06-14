@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { ThemeProvider } from './context/ThemeContext'
 import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
@@ -14,7 +13,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ThemeProvider>
         <CartProvider>
           <NavBar />
           <main className="max-w-6xl mx-auto px-4 py-6">
@@ -27,8 +25,6 @@ function App() {
             </Routes>
           </main>
         </CartProvider>
-      </ThemeProvider>
-
     </BrowserRouter>
   )
 }
